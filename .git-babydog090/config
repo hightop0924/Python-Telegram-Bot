@@ -9,7 +9,5 @@
 	name = babydog090
 	email = babydog090@gmail.com
 [remote "origin"]
-	url = https://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@github.com/BabyDog090/Python-Telegram-Bot.git
+	url = https://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@github.com/BabyDog090/Python-Telegram-Bot.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "main"]
-	remote = origin

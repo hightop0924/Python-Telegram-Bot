@@ -13,6 +13,22 @@
 # hooks.allowdeletetag
 #   This boolean sets whether deleting tags will be allowed in the
 #   repository.  By default they won't be.
+# hooks.allowmodifytag
+#   This boolean sets whether a tag may be modified after creation. By default
+#   it won't be.
+# hooks.allowdeletebranch
+#   This boolean sets whether deleting branches will be allowed in the
+#   repository.  By default they won't be.
+# hooks.denycreatebranch
+#   This boolean sets whether remotely creating branches will be denied
+#   in the repository.  By default this is allowed.
+#
+
+# --- Command line
+refname="$1"
+oldrev="$2"
+newrev="$3"
+
 # --- Safety check
 if [ -z "$GIT_DIR" ]; then
 	echo "Don't run this script from the command line." >&2

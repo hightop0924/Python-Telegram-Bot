@@ -13,3 +13,12 @@ then
 	do
 		eval "value=\$GIT_PUSH_OPTION_$i"
 		case "$value" in
+		echoback=*)
+			echo "echo from the pre-receive-hook: ${value#*=}" >&2
+			;;
+		reject)
+			exit 1
+		esac
+		i=$((i + 1))
+	done
+fi
